@@ -1,30 +1,36 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Arturo Mena"> 
+        <title>Arturo Mena's Portfolio</title>
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <ul class="emoji-flower-bed"></ul>
-        <script>
-            const url = 'https://apis.scrimba.com/emojihub/api/all/category/animals-and-nature';
-            const flowerBed = document.querySelector('.emoji-flower-bed');
+        <h1>Arturo Mena</h1>
+        <section id="About">
+        <h2>About</h2>
+        <p>Arturo's passion for continuous learning drives his professional growth, allowing him to stay ahead in the ever-evolving IT landscape.
 
-            function clearTheGarden(arr){
-                return arr.filter(emoji => (emoji.group === "plant other" || emoji.group === "animal bug") && !(emoji.name.includes("tree")));
-            }
-
-            fetch(url) 
-                .then(response => response.json())
-                /*.then((data) => {
-                    console.log('Data fetched: ', data); // let's see what data looks like
-                })*/
-                .then((data) => {
-                    const data2 = clearTheGarden(data);
-                    //console.log(data2); // for debuggin purposes only
-                    data2.forEach(emoji => {
-                        flowerBed.innerHTML += `<li>${emoji.htmlCode}</li>`;
-                    });    
-                })
-                .catch(err => console.log(err));
-        </script>
+            Beyond his professional endeavors, Arturo enjoys exploring new places, hiking, biking, drawing, reading, and photography. His adventurous spirit and creative pursuits reflect a dynamic personality that thrives on curiosity and innovation.</p>
+        </section>
+        <section id="Experience">
+        <h2>Experience</h2>
+        <ul>
+            <li>HTML & CSS Crash Course</li>
+            <li>JavaScript Deep Dive</li>
+            <li>JavaScript Interview Challenges</li>
+            <li>Python Crash Course</li>
+        </ul>
+        </section>
+        <section id="Connect">
+        <h2>Connect</h2>
+        <ul>
+            <li>GitHub: <a href="https://github.com/mena-arturo/arturo-mena-kepler"> mena-arturo</a> </li>
+            <li>WhatsApp: <a href="https://wa.me/18573181522">Arturo Mena</a></li>
+        </ul>
+        </section>
     </body>
 </html>
