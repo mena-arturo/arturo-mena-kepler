@@ -1,5 +1,5 @@
 body {
-    margin: 10px;
+    margin: 0px;
     background: rgb(5, 72, 90); /* Change the background color of the page body */
     color: white; /* Change the default text color to white */
     font-family: "Lato", 'Courier New', Courier, monospace; /*Lato* is a custom font family from Google Fonts*/
@@ -18,24 +18,65 @@ h2 {
     font-weight: 350;
 }
 
+h3 {
+    /*Change font size and weight*/
+    font-size: 17px;
+    font-weight: 300;
+}
+
 ul {
     list-style-type: square;
 }
 
+header{
+    position: sticky;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    /*border: solid 2px white; *//*Border added for debugging purposes*/
+}
+
+nav {
+/*border: solid 2px white; *//*Border added for debugging purposes*/
+padding: 10px;
+}
+
+.navlink {
+    color: white;
+    text-decoration: none;
+    /*border: solid 1px white; */ /*Border added for debugging purposes*/
+    padding: 10px;
+}
+
+.navlink:hover {
+    color:black;
+    background-color: aliceblue;
+}
+
 #About {
-    /*border: 5px solid pink;*/ /*Border add for debuggin purposes*/
+    /*border: 5px solid pink;*/ /*Border added for debugging purposes*/
     margin: 15px; /*Adding margin between sections*/
     padding: 5px;
 }
 
 #Experience {
-    /*border: 5px solid yellow; *//*Border add for debuggin purposes*/
+    /*border: 5px solid yellow; *//*Border added for debugging purposes*/
+    margin: 15px; /*Adding margin between sections*/
+    padding: 5px;
+}
+
+#Skills {
+    /*border: 5px solid yellow; *//*Border added for debugging purposes*/
+    margin: 15px; /*Adding margin between sections*/
+    padding: 5px;
+}
+#Projects {
+    /*border: 5px solid yellow; *//*Border added for debugging purposes*/
     margin: 15px; /*Adding margin between sections*/
     padding: 5px;
 }
 
 #Connect {
-    /*border: 5px solid pink;*/ /*Border add for debuggin purposes*/
+    /*border: 5px solid pink;*/ /*Border added for debugging purposes*/
     margin: 15px;  /*Adding margin between sections*/
     padding: 5px;
     height: 150px;
@@ -59,3 +100,16 @@ ul {
     margin-right: auto;
 }
 
+.socialicon{
+
+margin-left: auto;
+margin-right: auto;
+
+}
+.columns{
+    display: flex;
+}
+
+.column{
+    margin-left: 30px;
+}
