@@ -1,0 +1,61 @@
+body {
+    margin: 10px;
+    background: rgb(5, 72, 90); /* Change the background color of the page body */
+    color: white; /* Change the default text color to white */
+    font-family: "Lato", 'Courier New', Courier, monospace; /*Lato* is a custom font family from Google Fonts*/
+    font-weight: 300;
+}
+
+h1 {
+    /*Change font size and weight*/
+    font-size: 40px; 
+    font-weight: 800;
+}
+
+h2 {
+    /*Change font size and weight*/
+    font-size: 27px;
+    font-weight: 350;
+}
+
+ul {
+    list-style-type: square;
+}
+
+#About {
+    /*border: 5px solid pink;*/ /*Border add for debuggin purposes*/
+    margin: 15px; /*Adding margin between sections*/
+    padding: 5px;
+}
+
+#Experience {
+    /*border: 5px solid yellow; *//*Border add for debuggin purposes*/
+    margin: 15px; /*Adding margin between sections*/
+    padding: 5px;
+}
+
+#Connect {
+    /*border: 5px solid pink;*/ /*Border add for debuggin purposes*/
+    margin: 15px;  /*Adding margin between sections*/
+    padding: 5px;
+    height: 150px;
+    text-align: center;
+}
+
+.socialNets{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hiden;
+    text-decoration: none;
+}
+
+.social{
+    display: block;
+    /*float: left;*/
+    float:inline-end;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
