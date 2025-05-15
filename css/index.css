@@ -149,7 +149,9 @@ main{
     Using Grid
     ============================
 */
-.myGrid{
+.experience-grid,
+.skills-grid   /*Styling skill section with grid*/
+{
     display: grid;
     grid-template-columns: auto auto;
     gap: 1em 3em ;
