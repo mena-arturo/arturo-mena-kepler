@@ -1,6 +1,55 @@
+/*  
+    ================================================
+    Design:
+    Mobile first
+    ================================================
+*/
+/*--------------------------------- header section --------------------------------------------*/
+header{
+    /*border: solid 2px white;*/ /*Border added for debugging purposes*/
+    position: sticky;
+    top: 0;
+    background-color: rgb(7, 43, 71);
+    padding: 1em 0;
+    margin: 0;
+}
+
+.title{
+    /*border: solid 2px rgb(255, 255, 255);*/ /*Border added for debugging purposes*/
+    margin: 0 1em;
+    text-align: center;
+}
+
+.title h1{
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    /*border: solid 2px white; *//*Border added for debugging purposes*/
+    padding: 1em 0;
+}
+
+.navlink {
+    /*border: solid 1px white; */ /*Border added for debugging purposes*/
+    color: white;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    display: block;
+    padding: 0.1em;
+}
+
+.navlink:hover {
+    color:black;
+    background-color: aliceblue;
+}
+
+
+/*--------------------------------- body section --------------------------------------------*/
+
 body {
     margin: 0px;
-    background: rgb(5, 72, 90); /* Change the background color of the page body */
+    background: rgb(12, 76, 125); /* Change the background color of the page body */
     color: white; /* Change the default text color to white */
     font-family: "Lato", 'Courier New', Courier, monospace; /*Lato* is a custom font family from Google Fonts*/
     font-weight: 300;
@@ -8,19 +57,19 @@ body {
 
 h1 {
     /*Change font size and weight*/
-    font-size: 40px; 
-    font-weight: 800;
+    font-size: 3rem; 
+    font-weight: 700;
 }
 
 h2 {
     /*Change font size and weight*/
-    font-size: 27px;
-    font-weight: 350;
+    font-size: 2.1rem;
+    font-weight: 400;
 }
 
 h3 {
     /*Change font size and weight*/
-    font-size: 17px;
+    font-size: 1.2rem;
     font-weight: 300;
 }
 
@@ -28,28 +77,11 @@ ul {
     list-style-type: square;
 }
 
-header{
-    position: sticky;
-    top: 0;
-    background-color: rgb(0, 0, 0);
-    /*border: solid 2px white; *//*Border added for debugging purposes*/
-}
-
-nav {
-/*border: solid 2px white; *//*Border added for debugging purposes*/
-padding: 10px;
-}
-
-.navlink {
-    color: white;
-    text-decoration: none;
-    /*border: solid 1px white; */ /*Border added for debugging purposes*/
-    padding: 10px;
-}
-
-.navlink:hover {
-    color:black;
-    background-color: aliceblue;
+/*--------------------------------- body->mainsection --------------------------------------------*/
+main{
+    /*border: solid 2px white;*/ /*Border added for debugging purposes*/
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 #About {
@@ -101,10 +133,8 @@ padding: 10px;
 }
 
 .socialicon{
-
-margin-left: auto;
-margin-right: auto;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 .columns{
     display: flex;
@@ -112,4 +142,101 @@ margin-right: auto;
 
 .column{
     margin-left: 30px;
+}
+
+/* =============================
+    Stretch Goal week 10
+    Using Grid
+    ============================
+*/
+.myGrid{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em 3em ;
+}
+
+.course-date{
+     /*border: solid 3px white;*/ /*for debugging purposes*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: auto 0;
+}
+
+/*--------------------------------- footer section --------------------------------------------*/
+footer{
+    padding: 1.5em;
+    background-color: rgb(7, 43, 71);
+    text-align: center;
+}
+
+footer p,
+footer h3{
+    margin: 0;
+}
+
+/*--------------------------------- Media queries section -------------------------------------*/
+
+/* Media query 1: at least  2 changes on 4 elements*/
+/* Tablet size devices */ 
+@media screen and (min-width: 576px){
+
+    header{
+        /*Flex settings*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title{
+        text-align: left;
+        font-size: 2.5rem;
+    }
+
+    .navlink {
+        /*border: solid 1px white; */ /*Border added for debugging purposes*/
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        display: inline;
+        padding: 0.3em;
+    }
+
+    footer{
+        position: sticky;
+        bottom: 0;
+    }
+}
+
+/* Media query 2: at least  2 changes on 3 elements*/
+/* Laptop and everything else */
+@media screen and (min-width: 768px){
+
+    body{
+        background-image: linear-gradient(to right, rgb(12, 76, 125,0), rgba(7,43,71,1));
+    }
+
+    h2{
+        font-family: 'Roboto','Courier New', Courier, sans-serif;
+        font-weight: 700;
+        color: rgb(177, 177, 177);
+    }
+
+    .title{
+        font-size: 3.2rem;
+        letter-spacing: 2px;
+    }
+
+    .title h1{
+        font-weight: 900;
+        color: whitesmoke;
+    }
+
+    .navlink {
+        font-size: 1.2rem;
+        padding: 0.5em;
+        color: whitesmoke;
+    }
+
+    
 }

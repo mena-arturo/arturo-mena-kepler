@@ -8,12 +8,15 @@
         <!-- Custom font families from Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <title>Arturo Mena's Portfolio</title>
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
         <header>
+            <div class="title">
+                <h1>Arturo Mena</h1>
+            </div>
             <nav>
                 <a class="navlink" href="#About">About</a>
                 <a class="navlink" href="#Experience">Experience</a>
@@ -22,83 +25,92 @@
                 <a class="navlink" href="#Connect">Connect</a>
             </nav>
         </header>
-        <h1>Arturo Mena</h1>
-        <section id="About">
-        <h2>About</h2>
-        <p>Arturo's passion for continuous learning drives his professional growth, allowing him to stay ahead in the ever-evolving IT landscape.
-            Beyond his professional endeavors, Arturo enjoys exploring new places, hiking, biking, drawing, reading, and photography. His adventurous spirit and creative pursuits reflect a dynamic personality that thrives on curiosity and innovation.</p>
-            <blockquote><q>Stay hungry, stay foolish.</q> Steve Jobs.</blockquote>
+        <main>
+            <section id="About">
+                <h2>About</h2>
+                <p>Arturo's passion for continuous learning drives his professional growth, allowing him to stay ahead in the ever-evolving IT landscape.
+                    Beyond his professional endeavors, Arturo enjoys exploring new places, hiking, biking, drawing, reading, and photography. His adventurous spirit and creative pursuits reflect a dynamic personality that thrives on curiosity and innovation.</p>
+                    <blockquote><q>Stay hungry, stay foolish.</q> Steve Jobs.</blockquote>
+            </section>
             
-        </section>
-        <section id="Experience">
-        <h2>Experience</h2>
-        <div class="columns">
-            <div class="column">
-                <h3>HTML & CSS Crash Course</h3>
-                <p>Learned to build web pages using HTML and CSS</p>
-                <h3>JavaScript Deep Dive</h3>
-                <p>Learned advance JavaScript from the ground up</p>
-                <h3>JavaScript Interview Challenges</h3>
-                <p>Learned essential tech interview problems</p>
-                <h3>Python Crash Course</h3>
-                <p>Learned how to make scripts in python</p>
-            </div> <!--column1-->
-            <div class="column">
-                <h3>Date</h3>
-                <p>April 2025</p>
-                <h3>Date</h3>
-                <p>February-March 2025 </p>
-                <h3>Date</h3>
-                <p>March 2025</p>
-                <h3>Date</h3>
-                <p>March 2025</p>
-            </div><!--column2-->
-        </div>
-        </section>
-        <section id="Skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            </ul>
-        </section>
-        <section id="Projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            </ul>
-        </section>
-        <section id="Connect">
-        <h2>Connect</h2>
-        <div class="columns">
-            <a class="socialicon" href="https://github.com/mena-arturo/arturo-mena-kepler"><img src="img/github-mark.png" width="30" height="30" alt="gitHub platform link"></a>
-            <a class="socialicon" href="https://wa.me/18573181522"><img src="img/whatsApp.png" width="35" height="35" alt="whatsApp social media link"></a>
-            <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Facebook_logo_(square).png" width="30" height="30" alt="facebook social media link"></a>
-            <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Instagram_logo_2016.svg.webp" width="30" height="30" alt="instagram social media link"></a>
-            <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Logo_of_YouTube_(2015-2017).svg.png" width="60" height="30" alt="whatsApp social media link"></a>
-        </div>
-        <!-- 
-        <ul class="socialNets">
-            <li class="social"><a class="socialicon" href="https://github.com/mena-arturo/arturo-mena-kepler"><img src="img/github-mark.png" width="30" height="30" alt="gitHub platform link"></a></li>
-            <li class="social"><a class="socialicon" href="https://wa.me/18573181522"><img src="img/whatsApp.png" width="35" height="35" alt="whatsApp social media link"></a></li>
-            <li class="social"><a class="socialicon" href="https://wa.me/18573181522"><img src="img/Facebook_logo_(square).png" width="30" height="30" alt="facebook social media link"></a></li>
-            <li class="social"><a class="socialicon" href="https://wa.me/18573181522"><img src="img/Instagram_logo_2016.svg.webp" width="30" height="30" alt="instagram social media link"></a></li>
-            <li class="social"><a class="socialicon" href="https://wa.me/18573181522"><img src="img/Logo_of_YouTube_(2015-2017).svg.png" width="60" height="30" alt="whatsApp social media link"></a></li>
-        </ul>
-        -->
-        </section>
+            <section id="Experience">
+                <h2>Experience</h2>
+                <div class="myGrid">
+                        <div class="course-info">
+                            <h3>HTML & CSS Crash Course</h3>
+                            <p>Learned to build web pages using HTML and CSS</p>
+                        </div>
+                        <div class="course-date">
+                            <p>April 2025</p>
+                        </div>
+                        <div class="course-info">
+                            <h3>JavaScript Deep Dive</h3>
+                            <p>Learned advance JavaScript from the ground up</p>
+                        </div>
+                        <div class="course-date">
+                            <p>February-March 2025 </p>
+                        </div>
+                        <div class="course-info">
+                            <h3>JavaScript Interview Challenges</h3>
+                            <p>Learned essential tech interview problems</p>
+                        </div>
+                        <div class="course-date">
+                            <p>March 2025</p>
+                        </div>
+                        <div class="course-info">
+                            <h3>Python Crash Course</h3>
+                            <p>Learned how to make scripts in python</p>
+                        </div>
+                        <div class="course-date">
+                            <p>March 2025</p>
+                        </div>
+                </div> <!--myGrid-->
+
+            </section> <!--Experience section-->
+            
+            <section id="Skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </section> <!--Skills section-->
+            
+            <section id="Projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </section> <!--Projects section-->
+            
+            <section id="Connect">
+                <h2>Connect</h2>
+                <div class="columns">
+                    <a class="socialicon" href="https://github.com/mena-arturo/arturo-mena-kepler"><img src="img/github-mark.png" width="30" height="30" alt="gitHub platform link"></a>
+                    <a class="socialicon" href="https://wa.me/18573181522"><img src="img/whatsApp.png" width="35" height="35" alt="whatsApp social media link"></a>
+                    <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Facebook_logo_(square).png" width="30" height="30" alt="facebook social media link"></a>
+                    <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Instagram_logo_2016.svg.webp" width="30" height="30" alt="instagram social media link"></a>
+                    <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Logo_of_YouTube_(2015-2017).svg.png" width="60" height="30" alt="whatsApp social media link"></a>
+                </div>
+            </section> <!--Connect section-->
+
+    </main>
+    <footer>
+        <h3>Intro to programming</h3>
+        <p>Kepler - 2025</p>
+    </footer>
     </body>
 </html>
