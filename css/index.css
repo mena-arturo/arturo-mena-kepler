@@ -34,9 +34,10 @@ nav {
     /*border: solid 1px white; */ /*Border added for debugging purposes*/
     color: white;
     text-decoration: underline;
-    font-size: 1.5rem;
+    font-size: 1rem;
     display: block;
     padding: 0.1em;
+    margin-bottom: 0.5em;
 }
 
 .navlink:hover {
@@ -112,8 +113,16 @@ main{
     margin: 15px;  /*Adding margin between sections*/
     padding: 5px;
     height: 150px;
-    text-align: center;
+    text-align: left;
 }
+
+#LeaveMessage,
+#messages{
+    /*border: 5px solid pink;*/ /*Border added for debugging purposes*/
+    margin: 15px;  /*Adding margin between sections*/
+    padding: 5px;
+}
+
 
 .socialNets{
     list-style-type: none;
@@ -165,7 +174,44 @@ main{
     padding: auto 0;
 }
 
-/*--------------------------------- footer section --------------------------------------------*/
+/*--------------------------------- Week 12 form section ----------------------------------------------*/
+#leave_message{
+    display: grid;
+    grid-template-columns: 10rem auto;
+    grid-template-rows: 4;
+    gap: .5em 0.5em;
+}
+
+/*--------------------------------- Week 12 messages section ----------------------------------------------*/
+.messages-grid   /*Styling skill section with grid*/
+{
+    display: grid;
+    grid-template-columns: minmax(100px, 800px);
+    gap: 1em 3em ;
+    padding: 0;
+}
+
+.messages-grid li {
+    border: solid white 0.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.messages-grid a {
+    color: white;
+    margin: 0.5em 0;
+}
+.messages-grid span{
+    
+    margin-bottom: 0.5em;
+}
+.messages-grid button{
+    width: 25%;
+    /*width: auto;*/
+    margin-left: auto;
+}
+/*--------------------------------- Week 11 footer section --------------------------------------------*/
 footer{
     padding: 1.5em;
     background-color: rgb(7, 43, 71);
@@ -239,6 +285,4 @@ footer h3{
         padding: 0.5em;
         color: whitesmoke;
     }
-
-    
 }

@@ -12,7 +12,6 @@
         <title>Arturo Mena's Portfolio</title>
         <link rel="stylesheet" href="css/index.css">
     </head>
-    <body>
         <header>
             <div class="title">
                 <h1>Arturo Mena</h1>
@@ -23,6 +22,7 @@
                 <a class="navlink" href="#Skills">Skills</a>
                 <a class="navlink" href="#Projects">Projects</a>
                 <a class="navlink" href="#Connect">Connect</a>
+                <a class="navlink" href="#LeaveMessage">Leave a message</a>
             </nav>
         </header>
         <main>
@@ -99,6 +99,24 @@
                     <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Logo_of_YouTube_(2015-2017).svg.png" width="60" height="30" alt="whatsApp social media link"></a>
                 </div>
             </section> <!--Connect section-->
+
+            <section id="LeaveMessage">
+                <h2>Leave a message</h2>
+                <form id="leave_message">
+                    <label>Name: </label>
+                    <input type="text", name="usersName", required="true">
+                    <label>Email: </label>
+                    <input type="email", name="usersEmail", required="true">
+                    <label>Comment:</label>
+                    <textarea name="usersMessage", required="true"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </section> <!--Form section-->
+
+            <section id="messages">
+                <h2>Messages</h2>
+                <ul class="messages-grid"></ul>
+            </section> <!--Messages section-->
 
     </main>
 
