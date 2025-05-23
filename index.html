@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Arturo Mena"> 
-        <!-- Custom font families from Google Fonts -->
+        <!-- CUSTOM FONT FAMILIES FROM GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <title>Arturo Mena's Portfolio</title>
         <link rel="stylesheet" href="css/index.css">
     </head>
+    <body>
         <header>
             <div class="title">
                 <h1>Arturo Mena</h1>
@@ -25,101 +26,93 @@
                 <a class="navlink" href="#LeaveMessage">Leave a message</a>
             </nav>
         </header>
-        <main>
-            <section id="About">
-                <h2>About</h2>
-                <p>Arturo's passion for continuous learning drives his professional growth, allowing him to stay ahead in the ever-evolving IT landscape.
-                    Beyond his professional endeavors, Arturo enjoys exploring new places, hiking, biking, drawing, reading, and photography. His adventurous spirit and creative pursuits reflect a dynamic personality that thrives on curiosity and innovation.</p>
-                    <blockquote><q>Stay hungry, stay foolish.</q> Steve Jobs.</blockquote>
-            </section>
-            
-            <section id="Experience">
-                <h2>Experience</h2>
-                <div class="experience-grid">
-                        <div class="course-info">
-                            <h3>HTML & CSS Crash Course</h3>
-                            <p>Learned to build web pages using HTML and CSS</p>
-                        </div>
-                        <div class="course-date">
-                            <p>April 2025</p>
-                        </div>
-                        <div class="course-info">
-                            <h3>JavaScript Deep Dive</h3>
-                            <p>Learned advance JavaScript from the ground up</p>
-                        </div>
-                        <div class="course-date">
-                            <p>February-March 2025 </p>
-                        </div>
-                        <div class="course-info">
-                            <h3>JavaScript Interview Challenges</h3>
-                            <p>Learned essential tech interview problems</p>
-                        </div>
-                        <div class="course-date">
-                            <p>March 2025</p>
-                        </div>
-                        <div class="course-info">
-                            <h3>Python Crash Course</h3>
-                            <p>Learned how to make scripts in python</p>
-                        </div>
-                        <div class="course-date">
-                            <p>March 2025</p>
-                        </div>
-                </div> <!--experience-grid-->
+        
+            <main>
+                <section id="About">
+                    <h2>About</h2>
+                    <p>Arturo's passion for continuous learning drives his professional growth, allowing him to stay ahead in the ever-evolving IT landscape.
+                        Beyond his professional endeavors, Arturo enjoys exploring new places, hiking, biking, drawing, reading, and photography. His adventurous spirit and creative pursuits reflect a dynamic personality that thrives on curiosity and innovation.</p>
+                        <blockquote><q>Stay hungry, stay foolish.</q> Steve Jobs.</blockquote>
+                </section>
+                
+                <section id="Experience">
+                    <h2>Experience</h2>
+                    <div class="experience-grid">
+                            <div class="course-info">
+                                <h3>HTML & CSS Crash Course</h3>
+                                <p class="description-paragraph">Learned to build web pages using HTML and CSS.</p>
+                            </div>
+                            <div class="course-date">
+                                <p>April 2025</p>
+                            </div>
+                            <div class="course-info">
+                                <h3>JavaScript Deep Dive</h3>
+                                <p class="description-paragraph">Learned advance JavaScript from the ground up.</p>
+                            </div>
+                            <div class="course-date">
+                                <p>February-March 2025 </p>
+                            </div>
+                            <div class="course-info">
+                                <h3>JavaScript Interview Challenges</h3>
+                                <p class="description-paragraph">Learned essential tech interview problems.</p>
+                            </div>
+                            <div class="course-date">
+                                <p>March 2025</p>
+                            </div>
+                            <div class="course-info">
+                                <h3>Python Crash Course</h3>
+                                <p class="description-paragraph">Learned how to make scripts in python.</p>
+                            </div>
+                            <div class="course-date">
+                                <p>March 2025</p>
+                            </div>
+                    </div> <!--EXPERIENCE-GRID DIV-->
 
-            </section> <!--Experience section-->
-            
-            <section id="Skills">
-                <h2>Skills</h2>
-                <ul class="skills-grid">
-                    
-                </ul>
-            </section> <!--Skills section-->
-            
-            <section id="Projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                </ul>
-            </section> <!--Projects section-->
-            
-            <section id="Connect">
-                <h2>Connect</h2>
-                <div class="columns">
-                    <a class="socialicon" href="https://github.com/mena-arturo/arturo-mena-kepler"><img src="img/github-mark.png" width="30" height="30" alt="gitHub platform link"></a>
-                    <a class="socialicon" href="https://wa.me/18573181522"><img src="img/whatsApp.png" width="35" height="35" alt="whatsApp social media link"></a>
-                    <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Facebook_logo_(square).png" width="30" height="30" alt="facebook social media link"></a>
-                    <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Instagram_logo_2016.svg.webp" width="30" height="30" alt="instagram social media link"></a>
-                    <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Logo_of_YouTube_(2015-2017).svg.png" width="60" height="30" alt="whatsApp social media link"></a>
-                </div>
-            </section> <!--Connect section-->
+                </section> <!--END EXPERIENCE SECTION-->
+                
+                <section id="Skills">
+                    <h2>Skills</h2>
+                    <ul class="skills-grid">
+                        
+                    </ul>
+                </section> <!--END SKILLS SECTION-->
+                
+                <section id="Projects">
+                    <h2>Projects</h2>
+                    <ul class="project-list">
+                        
+                    </ul>
+                </section> <!--END PROJECTS SECTION-->
+                
+                <section id="Connect">
+                    <h2>Connect</h2>
+                    <div class="columns">
+                        <a class="socialicon" href="https://github.com/mena-arturo/arturo-mena-kepler"><img src="img/github-mark.png" width="30" height="30" alt="gitHub platform link"></a>
+                        <a class="socialicon" href="https://wa.me/18573181522"><img src="img/whatsApp.png" width="35" height="35" alt="whatsApp social media link"></a>
+                        <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Facebook_logo_(square).png" width="30" height="30" alt="facebook social media link"></a>
+                        <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Instagram_logo_2016.svg.webp" width="30" height="30" alt="instagram social media link"></a>
+                        <a class="socialicon" href="https://wa.me/18573181522"><img src="img/Logo_of_YouTube_(2015-2017).svg.png" width="60" height="30" alt="whatsApp social media link"></a>
+                    </div>
+                </section> <!--END CONNECT SECTION-->
 
-            <section id="LeaveMessage">
-                <h2>Leave a message</h2>
-                <form id="leave_message">
-                    <label>Name: </label>
-                    <input type="text", name="usersName", required="true">
-                    <label>Email: </label>
-                    <input type="email", name="usersEmail", required="true">
-                    <label>Comment:</label>
-                    <textarea name="usersMessage", required="true"></textarea>
-                    <button type="submit">Submit</button>
-                </form>
-            </section> <!--Form section-->
+                <section id="LeaveMessage">
+                    <h2>Leave a message</h2>
+                    <form id="leave_message">
+                        <label>Name: </label>
+                        <input class="input-field" type="text", name="usersName", required="true">
+                        <label>Email: </label>
+                        <input class="input-field" type="email", name="usersEmail", required="true">
+                        <label>Comment:</label>
+                        <textarea class="input-field" name="usersMessage", required="true"></textarea>
+                        <button class="action-btn" type="submit">Submit</button>
+                    </form>
+                </section> <!--END FORM SECTION-->
 
-            <section id="messages">
-                <h2>Messages</h2>
-                <ul class="messages-grid"></ul>
-            </section> <!--Messages section-->
-
-    </main>
-
+                <section id="messages">
+                    <h2>Messages</h2>
+                    <ul class="messages-grid"></ul>
+                </section> <!--END MESSAGES SECTION-->
+        </main>
     <script src="js/index.js"></script>
     </body>
 </html>
