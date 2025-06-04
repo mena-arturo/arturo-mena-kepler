@@ -1,31 +1,32 @@
-/*Creating a footer element-----------------------------------------*/
-//Create a variable to story my name
+/*--------------------------------- WEEK 11 ---------------------------------------------------*/
+/*-------- CREATING A FOOTER ELEMENT -----------------------------------*/
+
+//CREATE A VARIABLE TO STORE MY NAME
 const author = "Arturo Mena";
-//Create footer element
+//CREATE THE FOOTER ELEMENT
 const newFooter= document.createElement('footer');
 document.body.append(newFooter);
 
-//get the date from the system and store the year in thisYear
+//GETTING THE CURRENT DATE FROM THE SYSTEM AND STORE THE YEAR IN ANOTHER VARIABLE
 const today = new Date();
 const thisYear = today.getFullYear();
 
-//get ther footer element I just created
+//GET THE FOOTER ELEMENT WE JUST CREATED
 const footer = document.querySelector('footer');
 
-//create a paragraph element with my name and the year on it
+//CREATE A NEW PARAGRAPH
 const copyright = document.createElement('p');
 
-/*Stretch goal from week11 adding utfcode for copyright symbol*/
-copyright.innerHTML =  author + '\u00A9 ' + thisYear;
+//ADDING MY NAME, UTFCODE FOR COPYRIGHT SYMBOL, AND THE YEAR TO THE PARAGRAPH I JUST CREATED
+copyright.innerHTML =  author + ' \u00A9 ' + thisYear;
 
-//assign the paragraph to the footer
+//ASSIGN THE NEW PARAGRAPH TO THE FOOTER
 footer.appendChild(copyright);
 
-/*Modify skills section---------------------------------------------*/
+/*-------- MODIFYING SKILLS SECTION VIA DOM-----------------------------*/
 
 const skills = ["JavaScript", "HTML", "CSS", "Python", "Git", "GitHub", "MS Word", "MS Excell", "MS PowerPoint","Adobe Photoshop", ];
 const skillsSection = document.getElementById('Skills');
-// const skillsList = skillsSection.getElementsByTagName('ul'); /*Why is this not working?*/
 const skillsList = skillsSection.querySelector('ul');
 
 for(let i =0; i< skills.length; i++){
@@ -35,59 +36,84 @@ for(let i =0; i< skills.length; i++){
      skillsList.appendChild(skill);
 }
 
-/*-------------------------Week 12 ------------------------------------------------------- */
+/*--------------------------------- WEEK 12 ---------------------------------------------------*/
+
+//GET THE MESSAGES FORM
 const messageForm = document.getElementById('leave_message');
-
-
+//ADD A SUBMIT-EVENT LISTENER 
 messageForm.addEventListener('submit', event =>{
-    //console.log(event);
-    //console.log(event.target); // <-- target will tell us what element we clicked on, example: <p>, <h2>, <div>, etc.
-    //To prevent the browser from refreshing automatically
+    //PREVENT FORM AUTO-RESET
     event.preventDefault();
+    //GET INPUT FORM'S DATA
     const usersName =  event.target.usersName;
     const usersEmail= event.target.usersEmail;
     const usersMessage = event.target.usersMessage;
-    //console.log(usersName.value);
-    /*Why interpolation isn't working? Because it uses this apostrofe: (`) not this one: (') */
-    // console.log('Users Name: ${usersName.value}, users email: ${usersEmail.value} and users message: ${usersMessage.value}');
-    //Logging values to console for debugging purposes
-    //console.log("Users Name: " +usersName.value + ", users email: " + usersEmail.value+ " and users message: "+ usersMessage.value);
-
+    //ADD THE NEW MESSAGE TO THE MESSAGE LIST
     const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `<a href="mailto:${usersEmail.value}">${usersName.value}: </a><span>${usersMessage.value}</span>`;
-    
-
+    //CREATING THE REMOVE BUTTON
     const removeButton = document.createElement('button');
-    removeButton.innerText ="remove";
+    removeButton.innerText ="Remove";
     removeButton.type ="button";
-
+    removeButton.className ="action-btn";
+    //ADD A CLICK-EVENT LISTENER TO THE REMOVE BUTTON
     removeButton.addEventListener('click', event => {
         const entry= event.target.parentNode;
         entry.remove();
-        /*-------------------------------------Week 12 stretch goal -------------------------------------------------*/
-        //If the #messages section is empty hide it
+/*-------- STRETCH GOAL WEEK 12 ----------------------------------------*/
+        //IF THE MESSAGES SECTION IS EMPTY THEN HIDE IT
         if(messageList && messageList.children.length === 0){
-            console.log("The message list is empty");
-            messageSection.style.display = "none";
+                console.log("The message list is empty");
+                messageSection.style.display = "none";
         }
     })
+    //ADDING BUTTON AND NEW MESSAGE TO MESSAGE LIST    
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
-    /*-------------------------------------Week 12 stretch goal -------------------------------------------------*/
-    //Showing the #messages section
+    //AS MESSAGES SECTION HAS AT LEAST ONE NEW ELEMENT WE HAVE TO SHOW IT
     messageSection.style.display = "block";
-
-
-    //Reset form's fields
+    //RESETTING FORM'S FIELDS
     messageForm.reset();
 })
 
-/*-------------------------------------Week 12 stretch goal -------------------------------------------------*/
-//Hiding the #messages section
+/*-------- STRETCH GOAL WEEK 12 ----------------------------------------*/
+//HIDDING MESSAGES SECTION
 const messagesList = document.getElementById('messages').querySelector('ul');
 if(messagesList && messagesList.children.length === 0){
     console.log("The message list is empty");
     messages.style.display="none";
 }
+
+/*--------------------------------- WEEK 13 ---------------------------------------------------*/
+/*-------- FETCHING DATA FROM GITHUB -----------------------------------*/
+
+const userName="mena-arturo";
+fetch(`https://api.github.com/users/${userName}/repos`)
+    //HANDLING THE RESPONSE
+    .then(response =>{
+        if(!response.ok){ //IF THERE WAS A PROBLEM FETCHING THE INFO THROW AN ERROR
+            throw new Error(`Request for information about ${userName} repositories failed: ${response.status}`);
+        }
+        return response.json(); //PARSING JSON RESPONSE INTO A JS OBJECT
+    })
+    //HANDLING THE PARSED DATA
+    .then(data => {
+        //UNCOMENT FOR DEBUGGING PURSOSES ONLY: SEEING WHAT DATA LOOKS LIKE
+        //console.log(data);
+        //QUERYING THE DOM FOR PROJECT LIST
+        const projectSection = document.getElementById('Projects');
+        const projectList = projectSection.querySelector('ul');
+        //CREATE A LIST ITEM FOR EACH REPOSITORY FOUND ON GITHUB AND PUT IT ON THE PROJECT LIST
+        for (let i = 0; i< data.length; i++){
+            const project = document.createElement('li');
+            project.innerHTML = `${data[i].name}`;
+            projectList.appendChild(project);
+            //UNCOMENT FOR DEBUGGING PURSOSES ONLY
+            //console.log(`Repository name: ${data[i].name}`);
+    }
+    })
+    //HANDLING ERRORS WHILE FETCHING DATA FROM GITHUB
+    //.catch(error => console.error(error));
+    .catch(error => alert(error));

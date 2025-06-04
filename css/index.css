@@ -1,12 +1,14 @@
 /*  
-    ================================================
-    Design:
-    Mobile first
-    ================================================
+    =============================================================================================
+    DESIGN:
+    MOBILE FIRST
+    =============================================================================================
 */
-/*--------------------------------- header section --------------------------------------------*/
+
+/*--------------------------------- HEADER SECTION --------------------------------------------*/
+
 header{
-    /*border: solid 2px white;*/ /*Border added for debugging purposes*/
+    /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
     position: sticky;
     top: 0;
     background-color: rgb(7, 43, 71);
@@ -15,7 +17,7 @@ header{
 }
 
 .title{
-    /*border: solid 2px rgb(255, 255, 255);*/ /*Border added for debugging purposes*/
+    /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
     margin: 0 1em;
     text-align: center;
 }
@@ -23,15 +25,17 @@ header{
 .title h1{
     padding: 0;
     margin: 0;
+    font-family: "Lato", 'Courier New', Courier, monospace; /* Lato* IS A CUSTOM FONT-FAMILY FROM GOOGLE FONTS*/
+    color: rgba(74,159,226,1);
 }
 
 nav {
-    /*border: solid 2px white; *//*Border added for debugging purposes*/
+    /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
     padding: 1em 0;
 }
 
 .navlink {
-    /*border: solid 1px white; */ /*Border added for debugging purposes*/
+    /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
     color: white;
     text-decoration: underline;
     font-size: 1rem;
@@ -40,77 +44,75 @@ nav {
     margin-bottom: 0.5em;
 }
 
-.navlink:hover {
+.navlink:hover,
+.navlink:focus {
     color:black;
     background-color: aliceblue;
 }
 
-
-/*--------------------------------- body section --------------------------------------------*/
+/*--------------------------------- BODY SECTION ----------------------------------------------*/
 
 body {
     margin: 0px;
-    background: rgb(12, 76, 125); /* Change the background color of the page body */
-    color: white; /* Change the default text color to white */
-    font-family: "Lato", 'Courier New', Courier, monospace; /*Lato* is a custom font family from Google Fonts*/
-    font-weight: 300;
+    background: rgb(12, 76, 125); 
+    color: white; 
+    font-family: "Lato", 'Courier New', Courier, monospace; /* Lato* IS A CUSTOM FONT-FAMILY FROM GOOGLE FONTS*/
+    font-weight: 400;
 }
 
 h1 {
-    /*Change font size and weight*/
     font-size: 3rem; 
     font-weight: 700;
 }
 
 h2 {
-    /*Change font size and weight*/
     font-size: 2.1rem;
     font-weight: 400;
 }
 
 h3 {
-    /*Change font size and weight*/
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 ul {
     list-style-type: square;
 }
 
-/*--------------------------------- body->mainsection --------------------------------------------*/
+/*--------------------------------- BODY-> MAIN SECTION ---------------------------------------*/
+
 main{
-    /*border: solid 2px white;*/ /*Border added for debugging purposes*/
+    /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
     max-width: 800px;
     margin: 0 auto;
 }
 
 #About {
-    /*border: 5px solid pink;*/ /*Border added for debugging purposes*/
-    margin: 15px; /*Adding margin between sections*/
+    /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
+    margin: 15px; 
     padding: 5px;
 }
 
 #Experience {
-    /*border: 5px solid yellow; *//*Border added for debugging purposes*/
-    margin: 15px; /*Adding margin between sections*/
+    /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
+    margin: 15px; 
     padding: 5px;
 }
 
 #Skills {
-    /*border: 5px solid yellow; *//*Border added for debugging purposes*/
-    margin: 15px; /*Adding margin between sections*/
+    /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
+    margin: 15px; 
     padding: 5px;
 }
 #Projects {
-    /*border: 5px solid yellow; *//*Border added for debugging purposes*/
-    margin: 15px; /*Adding margin between sections*/
+    /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
+    margin: 15px; 
     padding: 5px;
 }
 
 #Connect {
-    /*border: 5px solid pink;*/ /*Border added for debugging purposes*/
-    margin: 15px;  /*Adding margin between sections*/
+    /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
+    margin: 15px;  
     padding: 5px;
     height: 150px;
     text-align: left;
@@ -118,11 +120,10 @@ main{
 
 #LeaveMessage,
 #messages{
-    /*border: 5px solid pink;*/ /*Border added for debugging purposes*/
-    margin: 15px;  /*Adding margin between sections*/
+    /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
+    margin: 15px;  
     padding: 5px;
 }
-
 
 .socialNets{
     list-style-type: none;
@@ -134,8 +135,7 @@ main{
 
 .social{
     display: block;
-    /*float: left;*/
-    float:inline-end;
+    float: inline-end;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -153,28 +153,57 @@ main{
     margin-left: 30px;
 }
 
-/* =============================
-    Stretch Goal week 10
-    Using Grid
-    ============================
-*/
+/*--------------------------------- STRETCH GOAL WEEK 10 --------------------------------------*/
+
+/*-------- STYLING EXPERIENCE, SKILLS, AND PROJECTS WITH GRID ----------*/
+
 .experience-grid,
-.skills-grid   /*Styling skill section with grid*/
+.skills-grid,
+.project-list   
 {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 1em 3em ;
+    gap: 1em 3em;
+}
+
+.skills-grid li{
+    background-color: rgba(139,136,134,.1);
+}
+
+.project-list li{
+    background-color: rgba(139,136,134,.1);
+}
+
+.course-info{
+    background-color: rgba(139,136,134,.1);
+}
+
+.course-info h3{
+    margin-bottom: 0.3rem;
+}
+
+.course-info p{
+    margin-top: 0;
+    margin-left: 1em;
+    font-style: italic;
 }
 
 .course-date{
-     /*border: solid 3px white;*/ /*for debugging purposes*/
+     /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: auto 0;
+    background-color: rgba(139,136,134,.1);
 }
 
-/*--------------------------------- Week 12 form section ----------------------------------------------*/
+.course-date p{
+     /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
+    margin-left: 1em;
+}
+
+/*--------------------------------- WEEK 12 FORM SECTION --------------------------------------*/
+
 #leave_message{
     display: grid;
     grid-template-columns: 10rem auto;
@@ -182,8 +211,23 @@ main{
     gap: .5em 0.5em;
 }
 
-/*--------------------------------- Week 12 messages section ----------------------------------------------*/
-.messages-grid   /*Styling skill section with grid*/
+.input-field{
+    background-color: rgb(163, 163, 163);
+}
+
+.action-btn{
+    background-color: rgb(163, 163, 163);
+    font-size: .8rem;
+    padding: .5rem;
+    border-radius: 8px;
+    border: none;
+}
+
+/*--------------------------------- WEEK 12 MESSAGES SECTION ----------------------------------*/
+
+/*-------- STYLING MESSAGES WITH GRID ----------------------------------*/
+
+.messages-grid
 {
     display: grid;
     grid-template-columns: minmax(100px, 800px);
@@ -192,10 +236,12 @@ main{
 }
 
 .messages-grid li {
-    border: solid white 0.5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: rgba(139,136,134,.1);
+    border-radius: 8px;
+    padding: .5rem;
 }
 
 .messages-grid a {
@@ -208,10 +254,11 @@ main{
 }
 .messages-grid button{
     width: 25%;
-    /*width: auto;*/
     margin-left: auto;
 }
-/*--------------------------------- Week 11 footer section --------------------------------------------*/
+
+/*--------------------------------- WEEK 11 FOOTER SECTION ------------------------------------*/
+
 footer{
     padding: 1.5em;
     background-color: rgb(7, 43, 71);
@@ -223,26 +270,45 @@ footer h3{
     margin: 0;
 }
 
-/*--------------------------------- Media queries section -------------------------------------*/
+/*--------------------------------- MEDIA QUERIES SECTION -------------------------------------*/
 
-/* Media query 1: at least  2 changes on 4 elements*/
-/* Tablet size devices */ 
+/*----------------------TABLET-SIZE DEVICES-----------------------------*/ 
+/*--------MEDIA QUERY 1: AT LEAST 2 CHANGES ON 4 ELEMENTS---------------*/
+
 @media screen and (min-width: 576px){
 
     header{
-        /*Flex settings*/
+        /*FLEX SETTINGS*/
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     .title{
+        font-size: 3rem;
         text-align: left;
-        font-size: 2.5rem;
+    }
+
+    .title h1{
+        color: whitesmoke;
+    }
+
+    .course-info h3{
+        margin-left: 1rem;
+    }
+
+    .course-info p{
+        margin-left: 2rem;
+    }
+    
+    nav{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: .2em;
     }
 
     .navlink {
-        /*border: solid 1px white; */ /*Border added for debugging purposes*/
+        /*border: solid 2px white;*/ /*FOR DEBUGGING PURPOSES ONLY*/
         color: white;
         text-decoration: none;
         font-size: 1rem;
@@ -256,12 +322,23 @@ footer h3{
     }
 }
 
-/* Media query 2: at least  2 changes on 3 elements*/
-/* Laptop and everything else */
+/*----------------------LAPTOP-SIZE DEVICES AND UP----------------------*/ 
+/*--------MEDIA QUERY 2: AT LEAST 2 CHANGES ON 3 ELEMENTS---------------*/
+
 @media screen and (min-width: 768px){
 
     body{
         background-image: linear-gradient(to right, rgb(12, 76, 125,0), rgba(7,43,71,1));
+    }
+
+    .title{
+        font-size: 4rem;
+        letter-spacing: 1px;
+    }
+    
+    .title h1{
+        font-weight: 900;
+        color: whitesmoke;
     }
 
     h2{
@@ -270,14 +347,9 @@ footer h3{
         color: rgb(177, 177, 177);
     }
 
-    .title{
-        font-size: 3.2rem;
-        letter-spacing: 2px;
-    }
-
-    .title h1{
-        font-weight: 900;
-        color: whitesmoke;
+    nav{
+        display: inline;
+        margin-right: 3em;
     }
 
     .navlink {
